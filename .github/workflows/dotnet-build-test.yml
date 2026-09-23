@@ -86,7 +86,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: ${{ secrets.SONAR_TOKEN != '' }}
+        if: env.SONAR_TOKEN != ''
         run: |
           dotnet sonarscanner begin /k:"ericksonlopezf_${{ github.event.repository.name || 'dotnet-xml' }}" \
             /o:"ericksonlopezf" \
@@ -118,7 +118,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        if: always() && secrets.SONAR_TOKEN != ''
+        if: always() && env.SONAR_TOKEN != ''
         run: dotnet sonarscanner end /d:sonar.token="$SONAR_TOKEN"
 
       - name: Upload test results
