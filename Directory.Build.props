@@ -1,10 +1,10 @@
 <!-- Copyright © Erickson Lopez. MIT License. -->
 <Project>
-  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../')))" />
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" Condition="Exists($([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../')))"/>
 
   <PropertyGroup>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <VersionSuffix></VersionSuffix>
+    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionSuffix/>
 
     <Authors>Erickson Lopez</Authors>
     <Company>Erickson Lopez</Company>
@@ -65,12 +65,12 @@
   </ItemDefinitionGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All"/>
   </ItemGroup>
 
   <ItemGroup Condition="'$(IsPackable)' == 'true'">
-    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" Condition="Exists('$(MSBuildThisFileDirectory)README.md')" />
-    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" PackagePath="\" Visible="false" Condition="Exists('$(MSBuildThisFileDirectory)icon.png')" />
+    <None Include="$(MSBuildThisFileDirectory)README.md" Pack="true" PackagePath="\" Visible="false" Condition="Exists('$(MSBuildThisFileDirectory)README.md')"/>
+    <None Include="$(MSBuildThisFileDirectory)icon.png" Pack="true" PackagePath="\" Visible="false" Condition="Exists('$(MSBuildThisFileDirectory)icon.png')"/>
   </ItemGroup>
 
   <!-- Test Projects Categorization -->
@@ -86,7 +86,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="$(MSBuildProjectFullPath.Contains('benchmarks'))">
-    <TargetFrameworks></TargetFrameworks>
+    <TargetFrameworks/>
     <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
