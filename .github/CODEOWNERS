@@ -1,0 +1,22 @@
+# Copyright © Erickson Lopez. MIT License.
+# Global owner for the entire repository
+* @ericksonlopezf
+
+# Documentation
+/docs/ @ericksonlopezf
+/*.md @ericksonlopezf
+
+# Build & Dependencies
+/Directory.Build.props @ericksonlopezf
+/Directory.Packages.props @ericksonlopezf
+/EricksonLopez.Xml.slnx @ericksonlopezf
+/nuget.config @ericksonlopezf
+/global.json @ericksonlopezf
+
+# Source Code
+/src/ @ericksonlopezf
+
+# Tests & Benchmarks
+/tests/ @ericksonlopezf
+/benchmarks/ @ericksonlopezf
+/samples/ @ericksonlopezf
