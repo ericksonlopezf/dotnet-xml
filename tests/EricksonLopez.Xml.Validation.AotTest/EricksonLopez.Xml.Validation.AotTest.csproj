@@ -1,0 +1,29 @@
+<!-- Copyright © Erickson Lopez. MIT License. -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks></TargetFrameworks>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>EricksonLopez.Xml.Validation.AotTest</AssemblyName>
+    <RootNamespace>EricksonLopez.Xml.Validation.AotTest</RootNamespace>
+    <Description>Native AOT smoke-test for EricksonLopez.Xml.Validation. Verifies that the library compiles and runs correctly under NativeAOT without any IL trimming or reflection issues.</Description>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <!-- Mark as non-test project so dotnet test does not invoke vstest against this AOT executable -->
+    <IsTestProject>false</IsTestProject>
+    <!-- Exclude from SonarQube production static analysis -->
+    <SonarQubeExclude>true</SonarQubeExclude>
+    <SonarQubeTestProject>true</SonarQubeTestProject>
+    <!-- Override the global IsAotCompatible so the publisher flag controls this project -->
+    <IsAotCompatible>true</IsAotCompatible>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <!-- Suppress NuGet audit warnings for test projects -->
+    <NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\EricksonLopez.Xml.Validation\EricksonLopez.Xml.Validation.csproj" />
+  </ItemGroup>
+
+</Project>

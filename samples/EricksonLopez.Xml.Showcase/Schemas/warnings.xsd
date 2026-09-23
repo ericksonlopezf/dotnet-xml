@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://ericksonlopez.dev/schemas/warnings"
+           xmlns="https://ericksonlopez.dev/schemas/warnings"
+           elementFormDefault="qualified">
+
+  <xs:element name="ExtensibleMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Header" type="xs:string" />
+        <xs:element name="Payload">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- xs:any with processContents="skip" or lax inside ambiguous model can emit schema warnings in some validators -->
+              <xs:any namespace="##any" processContents="lax" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

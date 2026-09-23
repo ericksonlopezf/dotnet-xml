@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+           xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+           elementFormDefault="qualified">
+
+  <xs:element name="Invoice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ID" type="xs:string" />
+        <xs:element name="IssueDate" type="xs:date" />
+        <xs:element name="InvoiceTypeCode" type="xs:normalizedString" />
+        <xs:element name="DocumentCurrencyCode" type="xs:string" />
+        <xs:element name="AccountingSupplierParty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartyName" type="xs:string" />
+              <xs:element name="TaxIdentifier" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccountingCustomerParty">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PartyName" type="xs:string" />
+              <xs:element name="TaxIdentifier" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LegalMonetaryTotal">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LineExtensionAmount" type="xs:decimal" />
+              <xs:element name="TaxExclusiveAmount" type="xs:decimal" />
+              <xs:element name="TaxInclusiveAmount" type="xs:decimal" />
+              <xs:element name="PayableAmount" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

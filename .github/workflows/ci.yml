@@ -1,0 +1,43 @@
+# Copyright © Erickson Lopez. MIT License.
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  compliance-gate:
+    name: Repository Compliance Gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          dotnet-version: "10.0.x"
+      - name: Run Repository Compliance Verifier
+        shell: pwsh
+        run: ./scripts/verify-compliance.ps1
+
+  build-and-test:
+    needs: compliance-gate
+    uses: ./.github/workflows/dotnet-build-test.yml
+    with:
+      artifact-name: test-results
+    secrets:
+      SNK_KEY: ${{ secrets.SNK_KEY }}
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  # ─── NativeAOT Smoke Test ─────────────────────────────────────────────────
+  # Validates that IsAotCompatible=true is genuine — the packages compile
+  # and run under NativeAOT (PublishAot=true) on Linux.
+  aot-smoke-test:
+    needs: compliance-gate
+    uses: ./.github/workflows/aot-smoke-test.yml
+    secrets:
+      SNK_KEY: ${{ secrets.SNK_KEY }}

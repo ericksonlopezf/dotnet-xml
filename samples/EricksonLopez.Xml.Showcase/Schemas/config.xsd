@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://ericksonlopez.dev/schemas/appconfig"
+           xmlns="https://ericksonlopez.dev/schemas/appconfig"
+           elementFormDefault="qualified">
+
+  <xs:element name="AppConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Environment" type="xs:string" />
+        <xs:element name="LogLevel" type="xs:string" />
+        <xs:element name="TimeoutSeconds" type="xs:int" />
+        <xs:element name="FeatureToggles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EnableAntiXxe" type="xs:boolean" />
+              <xs:element name="EnableCaching" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
