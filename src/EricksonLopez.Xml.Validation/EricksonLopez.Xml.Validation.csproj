@@ -1,0 +1,27 @@
+<!-- Copyright © Erickson Lopez. MIT License. -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <AssemblyName>EricksonLopez.Xml.Validation</AssemblyName>
+    <RootNamespace>EricksonLopez.Xml.Validation</RootNamespace>
+    <PackageId>EricksonLopez.Xml.Validation</PackageId>
+    <Description>XSD schema validation engine with Anti-XXE protection, precompiled schema cache, structured Result&lt;T&gt; errors, and Microsoft DI integration for .NET.</Description>
+    <PackageProjectUrl>https://ericksonlopez.dev/xml</PackageProjectUrl>
+    <PackageTags>$(CommonPackageTags);xml;xsd;xml-validation;xsd-validation;schema-validation;anti-xxe;schema-cache;result-pattern;dependency-injection;native-aot;trimming</PackageTags>
+    <IsPackable>true</IsPackable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EricksonLopez.Result" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="EricksonLopez.Xml.Validation.Tests" />
+  </ItemGroup>
+
+</Project>
