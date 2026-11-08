@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-20261101-084115</title>
+<title>EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-20261108-083438</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,8 +13,8 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet v0.15.8, Linux Ubuntu 24.04.5 LTS (Noble Numbat)
-AMD EPYC 7763 3.21GHz, 1 CPU, 4 logical and 2 physical cores
+BenchmarkDotNet v0.15.8, Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)
+AMD EPYC 7763 2.59GHz, 1 CPU, 4 logical and 2 physical cores
 .NET SDK 10.0.403
   [Host]    : .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
   .NET 10.0 : .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
@@ -23,12 +23,12 @@ AMD EPYC 7763 3.21GHz, 1 CPU, 4 logical and 2 physical cores
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method             </th><th>Job</th><th>Runtime</th><th>IterationCount</th><th>LaunchCount</th><th>WarmupCount</th><th>Mean </th><th>Error </th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Gen0</th><th>Gen1</th><th>Allocated</th><th>Alloc Ratio</th>
+<thead><tr><th>Method             </th><th>Job</th><th>Runtime</th><th>IterationCount</th><th>LaunchCount</th><th>WarmupCount</th><th>Mean </th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Gen0</th><th>Gen1</th><th>Allocated</th><th>Alloc Ratio</th>
 </tr>
-</thead><tbody><tr><td>ValidateFromString</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>6,223.20 ns</td><td>15.571 ns</td><td>13.803 ns</td><td>?</td><td>?</td><td>4.5013</td><td>0.8926</td><td>75680 B</td><td>?</td>
-</tr><tr><td>ValidateFromStream</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>7,534.18 ns</td><td>150.710 ns</td><td>154.768 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6098</td><td>108528 B</td><td>?</td>
-</tr><tr><td>ValidateFromSpan</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>7,683.84 ns</td><td>19.652 ns</td><td>18.383 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6022</td><td>108616 B</td><td>?</td>
-</tr><tr><td>CacheLookupContainsSchema</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>11.61 ns</td><td>0.008 ns</td><td>0.007 ns</td><td>?</td><td>?</td><td>-</td><td>-</td><td>-</td><td>?</td>
+</thead><tbody><tr><td>ValidateFromString</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>6,404.40 ns</td><td>32.567 ns</td><td>28.870 ns</td><td>?</td><td>?</td><td>4.5013</td><td>0.8926</td><td>75680 B</td><td>?</td>
+</tr><tr><td>ValidateFromStream</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>7,470.95 ns</td><td>148.705 ns</td><td>165.285 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6098</td><td>108528 B</td><td>?</td>
+</tr><tr><td>ValidateFromSpan</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>7,561.61 ns</td><td>30.340 ns</td><td>26.895 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6098</td><td>108616 B</td><td>?</td>
+</tr><tr><td>CacheLookupContainsSchema</td><td>.NET 10.0</td><td>.NET 10.0</td><td>Default</td><td>Default</td><td>Default</td><td>11.61 ns</td><td>0.013 ns</td><td>0.011 ns</td><td>?</td><td>?</td><td>-</td><td>-</td><td>-</td><td>?</td>
 </tr><tr><td>ValidateFromString</td><td>.NET 8.0</td><td>.NET 8.0</td><td>Default</td><td>Default</td><td>Default</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td><td>NA</td><td>NA</td><td>NA</td><td>?</td>
 </tr><tr><td>ValidateFromStream</td><td>.NET 8.0</td><td>.NET 8.0</td><td>Default</td><td>Default</td><td>Default</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td><td>NA</td><td>NA</td><td>NA</td><td>?</td>
 </tr><tr><td>ValidateFromSpan</td><td>.NET 8.0</td><td>.NET 8.0</td><td>Default</td><td>Default</td><td>Default</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td><td>NA</td><td>NA</td><td>NA</td><td>?</td>
@@ -37,10 +37,10 @@ AMD EPYC 7763 3.21GHz, 1 CPU, 4 logical and 2 physical cores
 </tr><tr><td>ValidateFromStream</td><td>.NET 9.0</td><td>.NET 9.0</td><td>Default</td><td>Default</td><td>Default</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td><td>NA</td><td>NA</td><td>NA</td><td>?</td>
 </tr><tr><td>ValidateFromSpan</td><td>.NET 9.0</td><td>.NET 9.0</td><td>Default</td><td>Default</td><td>Default</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td><td>NA</td><td>NA</td><td>NA</td><td>?</td>
 </tr><tr><td>CacheLookupContainsSchema</td><td>.NET 9.0</td><td>.NET 9.0</td><td>Default</td><td>Default</td><td>Default</td><td>NA</td><td>NA</td><td>NA</td><td>?</td><td>?</td><td>NA</td><td>NA</td><td>NA</td><td>?</td>
-</tr><tr><td>ValidateFromString</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>6,580.79 ns</td><td>447.509 ns</td><td>24.529 ns</td><td>?</td><td>?</td><td>4.5013</td><td>0.8926</td><td>75680 B</td><td>?</td>
-</tr><tr><td>ValidateFromStream</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>7,440.07 ns</td><td>1,668.159 ns</td><td>91.437 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6098</td><td>108528 B</td><td>?</td>
-</tr><tr><td>ValidateFromSpan</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>7,792.40 ns</td><td>87.616 ns</td><td>4.803 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6022</td><td>108616 B</td><td>?</td>
-</tr><tr><td>CacheLookupContainsSchema</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>11.62 ns</td><td>0.051 ns</td><td>0.003 ns</td><td>?</td><td>?</td><td>-</td><td>-</td><td>-</td><td>?</td>
+</tr><tr><td>ValidateFromString</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>6,396.09 ns</td><td>58.813 ns</td><td>3.224 ns</td><td>?</td><td>?</td><td>4.5013</td><td>0.8926</td><td>75680 B</td><td>?</td>
+</tr><tr><td>ValidateFromStream</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>7,327.67 ns</td><td>318.894 ns</td><td>17.480 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6098</td><td>108528 B</td><td>?</td>
+</tr><tr><td>ValidateFromSpan</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>7,188.38 ns</td><td>91.454 ns</td><td>5.013 ns</td><td>?</td><td>?</td><td>6.4697</td><td>1.6098</td><td>108616 B</td><td>?</td>
+</tr><tr><td>CacheLookupContainsSchema</td><td>ShortRun</td><td>.NET 10.0</td><td>3</td><td>1</td><td>3</td><td>11.61 ns</td><td>0.198 ns</td><td>0.011 ns</td><td>?</td><td>?</td><td>-</td><td>-</td><td>-</td><td>?</td>
 </tr></tbody></table>
 </body>
 </html>

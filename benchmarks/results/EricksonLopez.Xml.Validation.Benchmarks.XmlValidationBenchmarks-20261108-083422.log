@@ -1,0 +1,1160 @@
+// Validating benchmarks:
+//    * Job(ShortRun) doesn't have a Runtime characteristic. It's recommended to specify runtime by using WithRuntime explicitly.
+
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 16 benchmark(s) in total *****
+// ***** Building 3 exe(s) in Parallel: Start   *****
+// ***** Done, took 00:00:12 (12.96 sec)   *****
+// ***** Failed to build in Parallel, switching to sequential build   *****
+// ***** Done, took 00:00:02 (2.88 sec)   *****
+// Found 16 benchmarks:
+//   XmlValidationBenchmarks.ValidateFromString: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+//   XmlValidationBenchmarks.ValidateFromStream: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+//   XmlValidationBenchmarks.ValidateFromSpan: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+//   XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+//   XmlValidationBenchmarks.ValidateFromString: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+//   XmlValidationBenchmarks.ValidateFromStream: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+//   XmlValidationBenchmarks.ValidateFromSpan: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+//   XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+//   XmlValidationBenchmarks.ValidateFromString: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+//   XmlValidationBenchmarks.ValidateFromStream: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+//   XmlValidationBenchmarks.ValidateFromSpan: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+//   XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+//   XmlValidationBenchmarks.ValidateFromString: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   XmlValidationBenchmarks.ValidateFromStream: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   XmlValidationBenchmarks.ValidateFromSpan: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+//   XmlValidationBenchmarks.CacheLookupContainsSchema: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+// **************************
+// Benchmark: XmlValidationBenchmarks.ValidateFromString: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.ValidateFromString --job ".NET 10.0" --benchmarkId 0 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: .NET 10.0
+
+OverheadJitting  1: 1 op, 231914.00 ns, 231.9140 us/op
+WorkloadJitting  1: 1 op, 6056623.00 ns, 6.0566 ms/op
+
+OverheadJitting  2: 16 op, 217748.00 ns, 13.6093 us/op
+WorkloadJitting  2: 16 op, 1365074.00 ns, 85.3171 us/op
+
+WorkloadPilot    1: 16 op, 928026.00 ns, 58.0016 us/op
+WorkloadPilot    2: 32 op, 1196038.00 ns, 37.3762 us/op
+WorkloadPilot    3: 64 op, 3000644.00 ns, 46.8851 us/op
+WorkloadPilot    4: 128 op, 5875645.00 ns, 45.9035 us/op
+WorkloadPilot    5: 256 op, 10381235.00 ns, 40.5517 us/op
+WorkloadPilot    6: 512 op, 8709407.00 ns, 17.0106 us/op
+WorkloadPilot    7: 1024 op, 15859656.00 ns, 15.4879 us/op
+WorkloadPilot    8: 2048 op, 30778652.00 ns, 15.0286 us/op
+WorkloadPilot    9: 4096 op, 61138780.00 ns, 14.9265 us/op
+WorkloadPilot   10: 8192 op, 166425468.00 ns, 20.3156 us/op
+WorkloadPilot   11: 16384 op, 289123506.00 ns, 17.6467 us/op
+WorkloadPilot   12: 32768 op, 294552514.00 ns, 8.9890 us/op
+WorkloadPilot   13: 65536 op, 448391422.00 ns, 6.8419 us/op
+WorkloadPilot   14: 131072 op, 840723899.00 ns, 6.4142 us/op
+
+OverheadWarmup   1: 131072 op, 377016.00 ns, 2.8764 ns/op
+OverheadWarmup   2: 131072 op, 334535.00 ns, 2.5523 ns/op
+OverheadWarmup   3: 131072 op, 375352.00 ns, 2.8637 ns/op
+OverheadWarmup   4: 131072 op, 350185.00 ns, 2.6717 ns/op
+OverheadWarmup   5: 131072 op, 337091.00 ns, 2.5718 ns/op
+OverheadWarmup   6: 131072 op, 370593.00 ns, 2.8274 ns/op
+OverheadWarmup   7: 131072 op, 370383.00 ns, 2.8258 ns/op
+
+OverheadActual   1: 131072 op, 334546.00 ns, 2.5524 ns/op
+OverheadActual   2: 131072 op, 334576.00 ns, 2.5526 ns/op
+OverheadActual   3: 131072 op, 335217.00 ns, 2.5575 ns/op
+OverheadActual   4: 131072 op, 348872.00 ns, 2.6617 ns/op
+OverheadActual   5: 131072 op, 367147.00 ns, 2.8011 ns/op
+OverheadActual   6: 131072 op, 367588.00 ns, 2.8045 ns/op
+OverheadActual   7: 131072 op, 335377.00 ns, 2.5587 ns/op
+OverheadActual   8: 131072 op, 353111.00 ns, 2.6940 ns/op
+OverheadActual   9: 131072 op, 377887.00 ns, 2.8830 ns/op
+OverheadActual  10: 131072 op, 336820.00 ns, 2.5697 ns/op
+OverheadActual  11: 131072 op, 335207.00 ns, 2.5574 ns/op
+OverheadActual  12: 131072 op, 334386.00 ns, 2.5512 ns/op
+OverheadActual  13: 131072 op, 334326.00 ns, 2.5507 ns/op
+OverheadActual  14: 131072 op, 356838.00 ns, 2.7225 ns/op
+OverheadActual  15: 131072 op, 356998.00 ns, 2.7237 ns/op
+
+WorkloadWarmup   1: 131072 op, 845231493.00 ns, 6.4486 us/op
+WorkloadWarmup   2: 131072 op, 847874959.00 ns, 6.4688 us/op
+WorkloadWarmup   3: 131072 op, 842925729.00 ns, 6.4310 us/op
+WorkloadWarmup   4: 131072 op, 837490379.00 ns, 6.3895 us/op
+WorkloadWarmup   5: 131072 op, 843227949.00 ns, 6.4333 us/op
+WorkloadWarmup   6: 131072 op, 844461201.00 ns, 6.4427 us/op
+WorkloadWarmup   7: 131072 op, 839903103.00 ns, 6.4080 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 842528710.00 ns, 6.4280 us/op
+WorkloadActual   2: 131072 op, 839663956.00 ns, 6.4061 us/op
+WorkloadActual   3: 131072 op, 851485062.00 ns, 6.4963 us/op
+WorkloadActual   4: 131072 op, 842656737.00 ns, 6.4290 us/op
+WorkloadActual   5: 131072 op, 840335132.00 ns, 6.4112 us/op
+WorkloadActual   6: 131072 op, 838815119.00 ns, 6.3997 us/op
+WorkloadActual   7: 131072 op, 837156632.00 ns, 6.3870 us/op
+WorkloadActual   8: 131072 op, 847278259.00 ns, 6.4642 us/op
+WorkloadActual   9: 131072 op, 840775966.00 ns, 6.4146 us/op
+WorkloadActual  10: 131072 op, 834135897.00 ns, 6.3640 us/op
+WorkloadActual  11: 131072 op, 845173408.00 ns, 6.4482 us/op
+WorkloadActual  12: 131072 op, 835477032.00 ns, 6.3742 us/op
+WorkloadActual  13: 131072 op, 836059014.00 ns, 6.3786 us/op
+WorkloadActual  14: 131072 op, 840374509.00 ns, 6.4115 us/op
+WorkloadActual  15: 131072 op, 836417356.00 ns, 6.3814 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 842191890.00 ns, 6.4254 us/op
+WorkloadResult   2: 131072 op, 839327136.00 ns, 6.4036 us/op
+WorkloadResult   3: 131072 op, 842319917.00 ns, 6.4264 us/op
+WorkloadResult   4: 131072 op, 839998312.00 ns, 6.4087 us/op
+WorkloadResult   5: 131072 op, 838478299.00 ns, 6.3971 us/op
+WorkloadResult   6: 131072 op, 836819812.00 ns, 6.3844 us/op
+WorkloadResult   7: 131072 op, 846941439.00 ns, 6.4617 us/op
+WorkloadResult   8: 131072 op, 840439146.00 ns, 6.4120 us/op
+WorkloadResult   9: 131072 op, 833799077.00 ns, 6.3614 us/op
+WorkloadResult  10: 131072 op, 844836588.00 ns, 6.4456 us/op
+WorkloadResult  11: 131072 op, 835140212.00 ns, 6.3716 us/op
+WorkloadResult  12: 131072 op, 835722194.00 ns, 6.3761 us/op
+WorkloadResult  13: 131072 op, 840037689.00 ns, 6.4090 us/op
+WorkloadResult  14: 131072 op, 836080536.00 ns, 6.3788 us/op
+// GC:  590 117 0 9919481760 131072
+// Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 3631 has exited with code 0.
+
+Mean = 6.404 μs, StdErr = 0.008 μs (0.12%), N = 14, StdDev = 0.029 μs
+Min = 6.361 μs, Q1 = 6.380 μs, Median = 6.406 μs, Q3 = 6.422 μs, Max = 6.462 μs
+IQR = 0.042 μs, LowerFence = 6.317 μs, UpperFence = 6.485 μs
+ConfidenceInterval = [6.372 μs; 6.437 μs] (CI 99.9%), Margin = 0.033 μs (0.51% of Mean)
+Skewness = 0.34, Kurtosis = 2.04, MValue = 2
+
+// ** Remained 15 (93.8 %) benchmark(s) to run. Estimated finish 2026-11-08 8:40 (0h 5m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.ValidateFromStream: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.ValidateFromStream --job ".NET 10.0" --benchmarkId 1 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: .NET 10.0
+
+OverheadJitting  1: 1 op, 223326.00 ns, 223.3260 us/op
+WorkloadJitting  1: 1 op, 5743646.00 ns, 5.7436 ms/op
+
+OverheadJitting  2: 16 op, 216222.00 ns, 13.5139 us/op
+WorkloadJitting  2: 16 op, 1679084.00 ns, 104.9428 us/op
+
+WorkloadPilot    1: 16 op, 1139050.00 ns, 71.1906 us/op
+WorkloadPilot    2: 32 op, 1710913.00 ns, 53.4660 us/op
+WorkloadPilot    3: 64 op, 4077486.00 ns, 63.7107 us/op
+WorkloadPilot    4: 128 op, 7872475.00 ns, 61.5037 us/op
+WorkloadPilot    5: 256 op, 9390380.00 ns, 36.6812 us/op
+WorkloadPilot    6: 512 op, 9320309.00 ns, 18.2037 us/op
+WorkloadPilot    7: 1024 op, 16975611.00 ns, 16.5777 us/op
+WorkloadPilot    8: 2048 op, 35324147.00 ns, 17.2481 us/op
+WorkloadPilot    9: 4096 op, 68349076.00 ns, 16.6868 us/op
+WorkloadPilot   10: 8192 op, 191413773.00 ns, 23.3659 us/op
+WorkloadPilot   11: 16384 op, 387027101.00 ns, 23.6223 us/op
+WorkloadPilot   12: 32768 op, 368099878.00 ns, 11.2335 us/op
+WorkloadPilot   13: 65536 op, 477570327.00 ns, 7.2871 us/op
+WorkloadPilot   14: 131072 op, 950840519.00 ns, 7.2543 us/op
+
+OverheadWarmup   1: 131072 op, 361963.00 ns, 2.7616 ns/op
+OverheadWarmup   2: 131072 op, 334552.00 ns, 2.5524 ns/op
+OverheadWarmup   3: 131072 op, 334502.00 ns, 2.5520 ns/op
+OverheadWarmup   4: 131072 op, 359188.00 ns, 2.7404 ns/op
+OverheadWarmup   5: 131072 op, 358968.00 ns, 2.7387 ns/op
+OverheadWarmup   6: 131072 op, 355782.00 ns, 2.7144 ns/op
+OverheadWarmup   7: 131072 op, 356774.00 ns, 2.7220 ns/op
+OverheadWarmup   8: 131072 op, 334452.00 ns, 2.5517 ns/op
+
+OverheadActual   1: 131072 op, 334573.00 ns, 2.5526 ns/op
+OverheadActual   2: 131072 op, 338059.00 ns, 2.5792 ns/op
+OverheadActual   3: 131072 op, 335424.00 ns, 2.5591 ns/op
+OverheadActual   4: 131072 op, 360742.00 ns, 2.7522 ns/op
+OverheadActual   5: 131072 op, 334442.00 ns, 2.5516 ns/op
+OverheadActual   6: 131072 op, 334512.00 ns, 2.5521 ns/op
+OverheadActual   7: 131072 op, 334422.00 ns, 2.5514 ns/op
+OverheadActual   8: 131072 op, 334332.00 ns, 2.5508 ns/op
+OverheadActual   9: 131072 op, 334452.00 ns, 2.5517 ns/op
+OverheadActual  10: 131072 op, 334442.00 ns, 2.5516 ns/op
+OverheadActual  11: 131072 op, 357966.00 ns, 2.7311 ns/op
+OverheadActual  12: 131072 op, 356743.00 ns, 2.7217 ns/op
+OverheadActual  13: 131072 op, 357886.00 ns, 2.7305 ns/op
+OverheadActual  14: 131072 op, 348789.00 ns, 2.6610 ns/op
+OverheadActual  15: 131072 op, 347677.00 ns, 2.6526 ns/op
+
+WorkloadWarmup   1: 131072 op, 966276836.00 ns, 7.3721 us/op
+WorkloadWarmup   2: 131072 op, 969297008.00 ns, 7.3951 us/op
+WorkloadWarmup   3: 131072 op, 965561589.00 ns, 7.3667 us/op
+WorkloadWarmup   4: 131072 op, 959943071.00 ns, 7.3238 us/op
+WorkloadWarmup   5: 131072 op, 964319563.00 ns, 7.3572 us/op
+WorkloadWarmup   6: 131072 op, 963884621.00 ns, 7.3539 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 1006366119.00 ns, 7.6780 us/op
+WorkloadActual   2: 131072 op, 992709673.00 ns, 7.5738 us/op
+WorkloadActual   3: 131072 op, 994844621.00 ns, 7.5901 us/op
+WorkloadActual   4: 131072 op, 994388689.00 ns, 7.5866 us/op
+WorkloadActual   5: 131072 op, 994863747.00 ns, 7.5902 us/op
+WorkloadActual   6: 131072 op, 990517226.00 ns, 7.5570 us/op
+WorkloadActual   7: 131072 op, 993642084.00 ns, 7.5809 us/op
+WorkloadActual   8: 131072 op, 991382149.00 ns, 7.5636 us/op
+WorkloadActual   9: 131072 op, 995519170.00 ns, 7.5952 us/op
+WorkloadActual  10: 131072 op, 1008073088.00 ns, 7.6910 us/op
+WorkloadActual  11: 131072 op, 1005435853.00 ns, 7.6709 us/op
+WorkloadActual  12: 131072 op, 953243018.00 ns, 7.2727 us/op
+WorkloadActual  13: 131072 op, 956486235.00 ns, 7.2974 us/op
+WorkloadActual  14: 131072 op, 953134134.00 ns, 7.2718 us/op
+WorkloadActual  15: 131072 op, 953397797.00 ns, 7.2738 us/op
+WorkloadActual  16: 131072 op, 956100458.00 ns, 7.2945 us/op
+WorkloadActual  17: 131072 op, 953804658.00 ns, 7.2770 us/op
+WorkloadActual  18: 131072 op, 959745865.00 ns, 7.3223 us/op
+WorkloadActual  19: 131072 op, 958124204.00 ns, 7.3099 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 1006030695.00 ns, 7.6754 us/op
+WorkloadResult   2: 131072 op, 992374249.00 ns, 7.5712 us/op
+WorkloadResult   3: 131072 op, 994509197.00 ns, 7.5875 us/op
+WorkloadResult   4: 131072 op, 994053265.00 ns, 7.5840 us/op
+WorkloadResult   5: 131072 op, 994528323.00 ns, 7.5876 us/op
+WorkloadResult   6: 131072 op, 990181802.00 ns, 7.5545 us/op
+WorkloadResult   7: 131072 op, 993306660.00 ns, 7.5783 us/op
+WorkloadResult   8: 131072 op, 991046725.00 ns, 7.5611 us/op
+WorkloadResult   9: 131072 op, 995183746.00 ns, 7.5926 us/op
+WorkloadResult  10: 131072 op, 1007737664.00 ns, 7.6884 us/op
+WorkloadResult  11: 131072 op, 1005100429.00 ns, 7.6683 us/op
+WorkloadResult  12: 131072 op, 952907594.00 ns, 7.2701 us/op
+WorkloadResult  13: 131072 op, 956150811.00 ns, 7.2949 us/op
+WorkloadResult  14: 131072 op, 952798710.00 ns, 7.2693 us/op
+WorkloadResult  15: 131072 op, 953062373.00 ns, 7.2713 us/op
+WorkloadResult  16: 131072 op, 955765034.00 ns, 7.2919 us/op
+WorkloadResult  17: 131072 op, 953469234.00 ns, 7.2744 us/op
+WorkloadResult  18: 131072 op, 959410441.00 ns, 7.3197 us/op
+WorkloadResult  19: 131072 op, 957788780.00 ns, 7.3073 us/op
+// GC:  848 211 0 14224982016 131072
+// Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 3649 has exited with code 0.
+
+Mean = 7.471 μs, StdErr = 0.038 μs (0.51%), N = 19, StdDev = 0.165 μs
+Min = 7.269 μs, Q1 = 7.293 μs, Median = 7.561 μs, Q3 = 7.588 μs, Max = 7.688 μs
+IQR = 0.294 μs, LowerFence = 6.852 μs, UpperFence = 8.029 μs
+ConfidenceInterval = [7.322 μs; 7.620 μs] (CI 99.9%), Margin = 0.149 μs (1.99% of Mean)
+Skewness = -0.17, Kurtosis = 1.14, MValue = 3.45
+
+// ** Remained 14 (87.5 %) benchmark(s) to run. Estimated finish 2026-11-08 8:41 (0h 5m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.ValidateFromSpan: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.ValidateFromSpan --job ".NET 10.0" --benchmarkId 2 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: .NET 10.0
+
+OverheadJitting  1: 1 op, 224781.00 ns, 224.7810 us/op
+WorkloadJitting  1: 1 op, 5799454.00 ns, 5.7995 ms/op
+
+OverheadJitting  2: 16 op, 206777.00 ns, 12.9236 us/op
+WorkloadJitting  2: 16 op, 1702973.00 ns, 106.4358 us/op
+
+WorkloadPilot    1: 16 op, 1224215.00 ns, 76.5134 us/op
+WorkloadPilot    2: 32 op, 1688977.00 ns, 52.7805 us/op
+WorkloadPilot    3: 64 op, 4028374.00 ns, 62.9433 us/op
+WorkloadPilot    4: 128 op, 7826795.00 ns, 61.1468 us/op
+WorkloadPilot    5: 256 op, 6989175.00 ns, 27.3015 us/op
+WorkloadPilot    6: 512 op, 9867201.00 ns, 19.2719 us/op
+WorkloadPilot    7: 1024 op, 17389825.00 ns, 16.9823 us/op
+WorkloadPilot    8: 2048 op, 35849336.00 ns, 17.5046 us/op
+WorkloadPilot    9: 4096 op, 68351888.00 ns, 16.6875 us/op
+WorkloadPilot   10: 8192 op, 195869181.00 ns, 23.9098 us/op
+WorkloadPilot   11: 16384 op, 395862770.00 ns, 24.1615 us/op
+WorkloadPilot   12: 32768 op, 335554187.00 ns, 10.2403 us/op
+WorkloadPilot   13: 65536 op, 495594251.00 ns, 7.5622 us/op
+WorkloadPilot   14: 131072 op, 986803067.00 ns, 7.5287 us/op
+
+OverheadWarmup   1: 131072 op, 363259.00 ns, 2.7714 ns/op
+OverheadWarmup   2: 131072 op, 334515.00 ns, 2.5521 ns/op
+OverheadWarmup   3: 131072 op, 358190.00 ns, 2.7328 ns/op
+OverheadWarmup   4: 131072 op, 361065.00 ns, 2.7547 ns/op
+OverheadWarmup   5: 131072 op, 334435.00 ns, 2.5515 ns/op
+OverheadWarmup   6: 131072 op, 334455.00 ns, 2.5517 ns/op
+OverheadWarmup   7: 131072 op, 334375.00 ns, 2.5511 ns/op
+
+OverheadActual   1: 131072 op, 349674.00 ns, 2.6678 ns/op
+OverheadActual   2: 131072 op, 334566.00 ns, 2.5525 ns/op
+OverheadActual   3: 131072 op, 334606.00 ns, 2.5528 ns/op
+OverheadActual   4: 131072 op, 334546.00 ns, 2.5524 ns/op
+OverheadActual   5: 131072 op, 360223.00 ns, 2.7483 ns/op
+OverheadActual   6: 131072 op, 337631.00 ns, 2.5759 ns/op
+OverheadActual   7: 131072 op, 334436.00 ns, 2.5515 ns/op
+OverheadActual   8: 131072 op, 334436.00 ns, 2.5515 ns/op
+OverheadActual   9: 131072 op, 334346.00 ns, 2.5509 ns/op
+OverheadActual  10: 131072 op, 357319.00 ns, 2.7261 ns/op
+OverheadActual  11: 131072 op, 357108.00 ns, 2.7245 ns/op
+OverheadActual  12: 131072 op, 358951.00 ns, 2.7386 ns/op
+OverheadActual  13: 131072 op, 334445.00 ns, 2.5516 ns/op
+OverheadActual  14: 131072 op, 334436.00 ns, 2.5515 ns/op
+OverheadActual  15: 131072 op, 334386.00 ns, 2.5512 ns/op
+
+WorkloadWarmup   1: 131072 op, 995421524.00 ns, 7.5945 us/op
+WorkloadWarmup   2: 131072 op, 991246585.00 ns, 7.5626 us/op
+WorkloadWarmup   3: 131072 op, 1000939189.00 ns, 7.6366 us/op
+WorkloadWarmup   4: 131072 op, 999968455.00 ns, 7.6292 us/op
+WorkloadWarmup   5: 131072 op, 988566945.00 ns, 7.5422 us/op
+WorkloadWarmup   6: 131072 op, 990056191.00 ns, 7.5535 us/op
+WorkloadWarmup   7: 131072 op, 992123699.00 ns, 7.5693 us/op
+WorkloadWarmup   8: 131072 op, 988204978.00 ns, 7.5394 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 993468596.00 ns, 7.5796 us/op
+WorkloadActual   2: 131072 op, 992063202.00 ns, 7.5688 us/op
+WorkloadActual   3: 131072 op, 992193773.00 ns, 7.5698 us/op
+WorkloadActual   4: 131072 op, 987145078.00 ns, 7.5313 us/op
+WorkloadActual   5: 131072 op, 994115812.00 ns, 7.5845 us/op
+WorkloadActual   6: 131072 op, 990746963.00 ns, 7.5588 us/op
+WorkloadActual   7: 131072 op, 985939800.00 ns, 7.5221 us/op
+WorkloadActual   8: 131072 op, 1001735591.00 ns, 7.6426 us/op
+WorkloadActual   9: 131072 op, 992046084.00 ns, 7.5687 us/op
+WorkloadActual  10: 131072 op, 998087446.00 ns, 7.6148 us/op
+WorkloadActual  11: 131072 op, 994727689.00 ns, 7.5892 us/op
+WorkloadActual  12: 131072 op, 991755734.00 ns, 7.5665 us/op
+WorkloadActual  13: 131072 op, 985672610.00 ns, 7.5201 us/op
+WorkloadActual  14: 131072 op, 993540364.00 ns, 7.5801 us/op
+WorkloadActual  15: 131072 op, 988793466.00 ns, 7.5439 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 993134030.00 ns, 7.5770 us/op
+WorkloadResult   2: 131072 op, 991728636.00 ns, 7.5663 us/op
+WorkloadResult   3: 131072 op, 991859207.00 ns, 7.5673 us/op
+WorkloadResult   4: 131072 op, 986810512.00 ns, 7.5288 us/op
+WorkloadResult   5: 131072 op, 993781246.00 ns, 7.5819 us/op
+WorkloadResult   6: 131072 op, 990412397.00 ns, 7.5562 us/op
+WorkloadResult   7: 131072 op, 985605234.00 ns, 7.5196 us/op
+WorkloadResult   8: 131072 op, 991711518.00 ns, 7.5662 us/op
+WorkloadResult   9: 131072 op, 997752880.00 ns, 7.6123 us/op
+WorkloadResult  10: 131072 op, 994393123.00 ns, 7.5866 us/op
+WorkloadResult  11: 131072 op, 991421168.00 ns, 7.5639 us/op
+WorkloadResult  12: 131072 op, 985338044.00 ns, 7.5175 us/op
+WorkloadResult  13: 131072 op, 993205798.00 ns, 7.5776 us/op
+WorkloadResult  14: 131072 op, 988458900.00 ns, 7.5413 us/op
+// GC:  848 211 0 14236516352 131072
+// Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 3675 has exited with code 0.
+
+Mean = 7.562 μs, StdErr = 0.007 μs (0.10%), N = 14, StdDev = 0.027 μs
+Min = 7.518 μs, Q1 = 7.545 μs, Median = 7.566 μs, Q3 = 7.577 μs, Max = 7.612 μs
+IQR = 0.032 μs, LowerFence = 7.497 μs, UpperFence = 7.626 μs
+ConfidenceInterval = [7.531 μs; 7.592 μs] (CI 99.9%), Margin = 0.030 μs (0.40% of Mean)
+Skewness = -0.15, Kurtosis = 2.11, MValue = 2
+
+// ** Remained 13 (81.2 %) benchmark(s) to run. Estimated finish 2026-11-08 8:41 (0h 5m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.CacheLookupContainsSchema --job ".NET 10.0" --benchmarkId 3 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: .NET 10.0
+
+OverheadJitting  1: 1 op, 230381.00 ns, 230.3810 us/op
+WorkloadJitting  1: 1 op, 255819.00 ns, 255.8190 us/op
+
+OverheadJitting  2: 16 op, 333464.00 ns, 20.8415 us/op
+WorkloadJitting  2: 16 op, 336489.00 ns, 21.0306 us/op
+
+WorkloadPilot    1: 16 op, 2054.00 ns, 128.3750 ns/op
+WorkloadPilot    2: 32 op, 2324.00 ns, 72.6250 ns/op
+WorkloadPilot    3: 64 op, 2986.00 ns, 46.6563 ns/op
+WorkloadPilot    4: 128 op, 7184.00 ns, 56.1250 ns/op
+WorkloadPilot    5: 256 op, 12423.00 ns, 48.5273 ns/op
+WorkloadPilot    6: 512 op, 23273.00 ns, 45.4551 ns/op
+WorkloadPilot    7: 1024 op, 37701.00 ns, 36.8174 ns/op
+WorkloadPilot    8: 2048 op, 61115.00 ns, 29.8413 ns/op
+WorkloadPilot    9: 4096 op, 108032.00 ns, 26.3750 ns/op
+WorkloadPilot   10: 8192 op, 204633.00 ns, 24.9796 ns/op
+WorkloadPilot   11: 16384 op, 391452.00 ns, 23.8923 ns/op
+WorkloadPilot   12: 32768 op, 787984.00 ns, 24.0474 ns/op
+WorkloadPilot   13: 65536 op, 1565277.00 ns, 23.8842 ns/op
+WorkloadPilot   14: 131072 op, 3088416.00 ns, 23.5627 ns/op
+WorkloadPilot   15: 262144 op, 6139291.00 ns, 23.4195 ns/op
+WorkloadPilot   16: 524288 op, 12143619.00 ns, 23.1621 ns/op
+WorkloadPilot   17: 1048576 op, 24190167.00 ns, 23.0695 ns/op
+WorkloadPilot   18: 2097152 op, 48512221.00 ns, 23.1324 ns/op
+WorkloadPilot   19: 4194304 op, 86839476.00 ns, 20.7041 ns/op
+WorkloadPilot   20: 8388608 op, 113073533.00 ns, 13.4794 ns/op
+WorkloadPilot   21: 16777216 op, 226051062.00 ns, 13.4737 ns/op
+WorkloadPilot   22: 33554432 op, 451305246.00 ns, 13.4499 ns/op
+WorkloadPilot   23: 67108864 op, 903174186.00 ns, 13.4583 ns/op
+
+OverheadWarmup   1: 67108864 op, 176220603.00 ns, 2.6259 ns/op
+OverheadWarmup   2: 67108864 op, 191946406.00 ns, 2.8602 ns/op
+OverheadWarmup   3: 67108864 op, 124207326.00 ns, 1.8508 ns/op
+OverheadWarmup   4: 67108864 op, 124015106.00 ns, 1.8480 ns/op
+OverheadWarmup   5: 67108864 op, 124015136.00 ns, 1.8480 ns/op
+OverheadWarmup   6: 67108864 op, 124270864.00 ns, 1.8518 ns/op
+OverheadWarmup   7: 67108864 op, 124311620.00 ns, 1.8524 ns/op
+OverheadWarmup   8: 67108864 op, 124517425.00 ns, 1.8555 ns/op
+OverheadWarmup   9: 67108864 op, 124009084.00 ns, 1.8479 ns/op
+
+OverheadActual   1: 67108864 op, 124552541.00 ns, 1.8560 ns/op
+OverheadActual   2: 67108864 op, 125326006.00 ns, 1.8675 ns/op
+OverheadActual   3: 67108864 op, 124366403.00 ns, 1.8532 ns/op
+OverheadActual   4: 67108864 op, 124653880.00 ns, 1.8575 ns/op
+OverheadActual   5: 67108864 op, 123875305.00 ns, 1.8459 ns/op
+OverheadActual   6: 67108864 op, 124789003.00 ns, 1.8595 ns/op
+OverheadActual   7: 67108864 op, 124533344.00 ns, 1.8557 ns/op
+OverheadActual   8: 67108864 op, 124028622.00 ns, 1.8482 ns/op
+OverheadActual   9: 67108864 op, 124173703.00 ns, 1.8503 ns/op
+OverheadActual  10: 67108864 op, 123925549.00 ns, 1.8466 ns/op
+OverheadActual  11: 67108864 op, 125199570.00 ns, 1.8656 ns/op
+OverheadActual  12: 67108864 op, 124299737.00 ns, 1.8522 ns/op
+OverheadActual  13: 67108864 op, 124062284.00 ns, 1.8487 ns/op
+OverheadActual  14: 67108864 op, 124167040.00 ns, 1.8502 ns/op
+OverheadActual  15: 67108864 op, 128663705.00 ns, 1.9172 ns/op
+
+WorkloadWarmup   1: 67108864 op, 903559669.00 ns, 13.4641 ns/op
+WorkloadWarmup   2: 67108864 op, 910787694.00 ns, 13.5718 ns/op
+WorkloadWarmup   3: 67108864 op, 903559098.00 ns, 13.4641 ns/op
+WorkloadWarmup   4: 67108864 op, 905917967.00 ns, 13.4992 ns/op
+WorkloadWarmup   5: 67108864 op, 902708808.00 ns, 13.4514 ns/op
+WorkloadWarmup   6: 67108864 op, 910048058.00 ns, 13.5608 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 67108864 op, 902589489.00 ns, 13.4496 ns/op
+WorkloadActual   2: 67108864 op, 908703328.00 ns, 13.5407 ns/op
+WorkloadActual   3: 67108864 op, 902532692.00 ns, 13.4488 ns/op
+WorkloadActual   4: 67108864 op, 903181135.00 ns, 13.4584 ns/op
+WorkloadActual   5: 67108864 op, 903469564.00 ns, 13.4627 ns/op
+WorkloadActual   6: 67108864 op, 904144436.00 ns, 13.4728 ns/op
+WorkloadActual   7: 67108864 op, 903966453.00 ns, 13.4701 ns/op
+WorkloadActual   8: 67108864 op, 903375005.00 ns, 13.4613 ns/op
+WorkloadActual   9: 67108864 op, 903202133.00 ns, 13.4588 ns/op
+WorkloadActual  10: 67108864 op, 903519066.00 ns, 13.4635 ns/op
+WorkloadActual  11: 67108864 op, 902747894.00 ns, 13.4520 ns/op
+WorkloadActual  12: 67108864 op, 903245363.00 ns, 13.4594 ns/op
+WorkloadActual  13: 67108864 op, 905274709.00 ns, 13.4896 ns/op
+WorkloadActual  14: 67108864 op, 904137301.00 ns, 13.4727 ns/op
+WorkloadActual  15: 67108864 op, 930436388.00 ns, 13.8646 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 67108864 op, 778223086.00 ns, 11.5964 ns/op
+WorkloadResult   2: 67108864 op, 778166289.00 ns, 11.5956 ns/op
+WorkloadResult   3: 67108864 op, 778814732.00 ns, 11.6052 ns/op
+WorkloadResult   4: 67108864 op, 779103161.00 ns, 11.6095 ns/op
+WorkloadResult   5: 67108864 op, 779778033.00 ns, 11.6196 ns/op
+WorkloadResult   6: 67108864 op, 779600050.00 ns, 11.6169 ns/op
+WorkloadResult   7: 67108864 op, 779008602.00 ns, 11.6081 ns/op
+WorkloadResult   8: 67108864 op, 778835730.00 ns, 11.6056 ns/op
+WorkloadResult   9: 67108864 op, 779152663.00 ns, 11.6103 ns/op
+WorkloadResult  10: 67108864 op, 778381491.00 ns, 11.5988 ns/op
+WorkloadResult  11: 67108864 op, 778878960.00 ns, 11.6062 ns/op
+WorkloadResult  12: 67108864 op, 780908306.00 ns, 11.6364 ns/op
+WorkloadResult  13: 67108864 op, 779770898.00 ns, 11.6195 ns/op
+// GC:  0 0 0 0 67108864
+// Threading:  0 0 67108864
+
+// AfterAll
+// Benchmark Process 3704 has exited with code 0.
+
+Mean = 11.610 ns, StdErr = 0.003 ns (0.03%), N = 13, StdDev = 0.011 ns
+Min = 11.596 ns, Q1 = 11.605 ns, Median = 11.608 ns, Q3 = 11.617 ns, Max = 11.636 ns
+IQR = 0.012 ns, LowerFence = 11.588 ns, UpperFence = 11.634 ns
+ConfidenceInterval = [11.596 ns; 11.623 ns] (CI 99.9%), Margin = 0.013 ns (0.12% of Mean)
+Skewness = 0.77, Kurtosis = 2.97, MValue = 2
+
+// ** Remained 12 (75.0 %) benchmark(s) to run. Estimated finish 2026-11-08 8:41 (0h 5m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj (in 283 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 11 (68.8 %) benchmark(s) to run. Estimated finish 2026-11-08 8:40 (0h 3m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj (in 283 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 10 (62.5 %) benchmark(s) to run. Estimated finish 2026-11-08 8:39 (0h 2m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj (in 283 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 9 (56.2 %) benchmark(s) to run. Estimated finish 2026-11-08 8:38 (0h 2m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net8.0 (.NETCoreApp,Version=v8.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2/BenchmarkDotNet.Autogenerated.csproj (in 283 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 8.0-2
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 8 (50.0 %) benchmark(s) to run. Estimated finish 2026-11-08 8:38 (0h 1m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj (in 295 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 7 (43.8 %) benchmark(s) to run. Estimated finish 2026-11-08 8:37 (0h 1m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj (in 295 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 6 (37.5 %) benchmark(s) to run. Estimated finish 2026-11-08 8:37 (0h 1m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj (in 295 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 5 (31.2 %) benchmark(s) to run. Estimated finish 2026-11-08 8:37 (0h 0m from now) **
+// Build Error: Standard output: 
+  
+ Standard error: 
+   Determining projects to restore...
+/home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj : error NU1201: Project EricksonLopez.Xml.Validation.Benchmarks is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project EricksonLopez.Xml.Validation.Benchmarks supports: net10.0 (.NETCoreApp,Version=v10.0)
+  Failed to restore /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3/BenchmarkDotNet.Autogenerated.csproj (in 295 ms).
+  2 of 3 projects are up-to-date for restore.
+
+// BenchmarkDotNet has failed to build the auto-generated boilerplate code.
+// It can be found in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 9.0-3
+// Please follow the troubleshooting guide: https://benchmarkdotnet.org/articles/guides/troubleshooting.html
+
+// ** Remained 4 (25.0 %) benchmark(s) to run. Estimated finish 2026-11-08 8:36 (0h 0m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.ValidateFromString: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.ValidateFromString --job ShortRun --benchmarkId 4 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 209322.00 ns, 209.3220 us/op
+WorkloadJitting  1: 1 op, 5586296.00 ns, 5.5863 ms/op
+
+OverheadJitting  2: 16 op, 238115.00 ns, 14.8822 us/op
+WorkloadJitting  2: 16 op, 1389518.00 ns, 86.8449 us/op
+
+WorkloadPilot    1: 16 op, 902668.00 ns, 56.4168 us/op
+WorkloadPilot    2: 32 op, 1269013.00 ns, 39.6567 us/op
+WorkloadPilot    3: 64 op, 3066884.00 ns, 47.9201 us/op
+WorkloadPilot    4: 128 op, 5942722.00 ns, 46.4275 us/op
+WorkloadPilot    5: 256 op, 10011009.00 ns, 39.1055 us/op
+WorkloadPilot    6: 512 op, 8447856.00 ns, 16.4997 us/op
+WorkloadPilot    7: 1024 op, 15820744.00 ns, 15.4499 us/op
+WorkloadPilot    8: 2048 op, 45454986.00 ns, 22.1948 us/op
+WorkloadPilot    9: 4096 op, 58780099.00 ns, 14.3506 us/op
+WorkloadPilot   10: 8192 op, 170013214.00 ns, 20.7536 us/op
+WorkloadPilot   11: 16384 op, 293893716.00 ns, 17.9378 us/op
+WorkloadPilot   12: 32768 op, 283374280.00 ns, 8.6479 us/op
+WorkloadPilot   13: 65536 op, 429756624.00 ns, 6.5576 us/op
+WorkloadPilot   14: 131072 op, 816380867.00 ns, 6.2285 us/op
+
+OverheadWarmup   1: 131072 op, 310522.00 ns, 2.3691 ns/op
+OverheadWarmup   2: 131072 op, 310422.00 ns, 2.3683 ns/op
+OverheadWarmup   3: 131072 op, 306805.00 ns, 2.3407 ns/op
+OverheadWarmup   4: 131072 op, 307756.00 ns, 2.3480 ns/op
+OverheadWarmup   5: 131072 op, 308198.00 ns, 2.3514 ns/op
+OverheadWarmup   6: 131072 op, 307677.00 ns, 2.3474 ns/op
+OverheadWarmup   7: 131072 op, 307326.00 ns, 2.3447 ns/op
+OverheadWarmup   8: 131072 op, 308208.00 ns, 2.3514 ns/op
+OverheadWarmup   9: 131072 op, 325481.00 ns, 2.4832 ns/op
+OverheadWarmup  10: 131072 op, 335529.00 ns, 2.5599 ns/op
+
+OverheadActual   1: 131072 op, 313488.00 ns, 2.3917 ns/op
+OverheadActual   2: 131072 op, 324779.00 ns, 2.4779 ns/op
+OverheadActual   3: 131072 op, 334708.00 ns, 2.5536 ns/op
+OverheadActual   4: 131072 op, 308197.00 ns, 2.3514 ns/op
+OverheadActual   5: 131072 op, 302587.00 ns, 2.3086 ns/op
+OverheadActual   6: 131072 op, 308458.00 ns, 2.3533 ns/op
+OverheadActual   7: 131072 op, 308949.00 ns, 2.3571 ns/op
+OverheadActual   8: 131072 op, 306134.00 ns, 2.3356 ns/op
+OverheadActual   9: 131072 op, 293951.00 ns, 2.2427 ns/op
+OverheadActual  10: 131072 op, 293931.00 ns, 2.2425 ns/op
+OverheadActual  11: 131072 op, 293921.00 ns, 2.2424 ns/op
+OverheadActual  12: 131072 op, 293982.00 ns, 2.2429 ns/op
+OverheadActual  13: 131072 op, 293931.00 ns, 2.2425 ns/op
+OverheadActual  14: 131072 op, 294001.00 ns, 2.2430 ns/op
+OverheadActual  15: 131072 op, 293981.00 ns, 2.2429 ns/op
+
+WorkloadWarmup   1: 131072 op, 829810317.00 ns, 6.3310 us/op
+WorkloadWarmup   2: 131072 op, 820553601.00 ns, 6.2603 us/op
+WorkloadWarmup   3: 131072 op, 817303391.00 ns, 6.2355 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 839132353.00 ns, 6.4021 us/op
+WorkloadActual   2: 131072 op, 838476203.00 ns, 6.3971 us/op
+WorkloadActual   3: 131072 op, 838343054.00 ns, 6.3960 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 838829766.00 ns, 6.3998 us/op
+WorkloadResult   2: 131072 op, 838173616.00 ns, 6.3948 us/op
+WorkloadResult   3: 131072 op, 838040467.00 ns, 6.3937 us/op
+// GC:  590 117 0 9919481760 131072
+// Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 3727 has exited with code 0.
+
+Mean = 6.396 μs, StdErr = 0.002 μs (0.03%), N = 3, StdDev = 0.003 μs
+Min = 6.394 μs, Q1 = 6.394 μs, Median = 6.395 μs, Q3 = 6.397 μs, Max = 6.400 μs
+IQR = 0.003 μs, LowerFence = 6.390 μs, UpperFence = 6.402 μs
+ConfidenceInterval = [6.337 μs; 6.455 μs] (CI 99.9%), Margin = 0.059 μs (0.92% of Mean)
+Skewness = 0.34, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 3 (18.8 %) benchmark(s) to run. Estimated finish 2026-11-08 8:36 (0h 0m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.ValidateFromStream: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.ValidateFromStream --job ShortRun --benchmarkId 5 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 247673.00 ns, 247.6730 us/op
+WorkloadJitting  1: 1 op, 5742072.00 ns, 5.7421 ms/op
+
+OverheadJitting  2: 16 op, 217677.00 ns, 13.6048 us/op
+WorkloadJitting  2: 16 op, 1722740.00 ns, 107.6713 us/op
+
+WorkloadPilot    1: 16 op, 1261698.00 ns, 78.8561 us/op
+WorkloadPilot    2: 32 op, 1664892.00 ns, 52.0279 us/op
+WorkloadPilot    3: 64 op, 3982923.00 ns, 62.2332 us/op
+WorkloadPilot    4: 128 op, 7725739.00 ns, 60.3573 us/op
+WorkloadPilot    5: 256 op, 6796302.00 ns, 26.5481 us/op
+WorkloadPilot    6: 512 op, 9259425.00 ns, 18.0848 us/op
+WorkloadPilot    7: 1024 op, 17428474.00 ns, 17.0200 us/op
+WorkloadPilot    8: 2048 op, 35364265.00 ns, 17.2677 us/op
+WorkloadPilot    9: 4096 op, 71308293.00 ns, 17.4093 us/op
+WorkloadPilot   10: 8192 op, 186801867.00 ns, 22.8030 us/op
+WorkloadPilot   11: 16384 op, 393605207.00 ns, 24.0238 us/op
+WorkloadPilot   12: 32768 op, 323887085.00 ns, 9.8842 us/op
+WorkloadPilot   13: 65536 op, 498904127.00 ns, 7.6127 us/op
+WorkloadPilot   14: 131072 op, 995247147.00 ns, 7.5931 us/op
+
+OverheadWarmup   1: 131072 op, 295061.00 ns, 2.2511 ns/op
+OverheadWarmup   2: 131072 op, 294220.00 ns, 2.2447 ns/op
+OverheadWarmup   3: 131072 op, 294099.00 ns, 2.2438 ns/op
+OverheadWarmup   4: 131072 op, 293999.00 ns, 2.2430 ns/op
+OverheadWarmup   5: 131072 op, 294059.00 ns, 2.2435 ns/op
+OverheadWarmup   6: 131072 op, 317714.00 ns, 2.4240 ns/op
+OverheadWarmup   7: 131072 op, 317533.00 ns, 2.4226 ns/op
+OverheadWarmup   8: 131072 op, 319667.00 ns, 2.4389 ns/op
+OverheadWarmup   9: 131072 op, 294059.00 ns, 2.2435 ns/op
+
+OverheadActual   1: 131072 op, 294109.00 ns, 2.2439 ns/op
+OverheadActual   2: 131072 op, 294220.00 ns, 2.2447 ns/op
+OverheadActual   3: 131072 op, 294199.00 ns, 2.2446 ns/op
+OverheadActual   4: 131072 op, 294110.00 ns, 2.2439 ns/op
+OverheadActual   5: 131072 op, 294060.00 ns, 2.2435 ns/op
+OverheadActual   6: 131072 op, 294050.00 ns, 2.2434 ns/op
+OverheadActual   7: 131072 op, 294100.00 ns, 2.2438 ns/op
+OverheadActual   8: 131072 op, 293999.00 ns, 2.2430 ns/op
+OverheadActual   9: 131072 op, 294020.00 ns, 2.2432 ns/op
+OverheadActual  10: 131072 op, 294090.00 ns, 2.2437 ns/op
+OverheadActual  11: 131072 op, 293970.00 ns, 2.2428 ns/op
+OverheadActual  12: 131072 op, 317603.00 ns, 2.4231 ns/op
+OverheadActual  13: 131072 op, 314317.00 ns, 2.3980 ns/op
+OverheadActual  14: 131072 op, 317193.00 ns, 2.4200 ns/op
+OverheadActual  15: 131072 op, 319627.00 ns, 2.4386 ns/op
+
+WorkloadWarmup   1: 131072 op, 1003545587.00 ns, 7.6564 us/op
+WorkloadWarmup   2: 131072 op, 1000840141.00 ns, 7.6358 us/op
+WorkloadWarmup   3: 131072 op, 996470985.00 ns, 7.6025 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 962146743.00 ns, 7.3406 us/op
+WorkloadActual   2: 131072 op, 958102332.00 ns, 7.3097 us/op
+WorkloadActual   3: 131072 op, 961989847.00 ns, 7.3394 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 961852634.00 ns, 7.3384 us/op
+WorkloadResult   2: 131072 op, 957808223.00 ns, 7.3075 us/op
+WorkloadResult   3: 131072 op, 961695738.00 ns, 7.3372 us/op
+// GC:  848 211 0 14224982016 131072
+// Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 3736 has exited with code 0.
+
+Mean = 7.328 μs, StdErr = 0.010 μs (0.14%), N = 3, StdDev = 0.017 μs
+Min = 7.307 μs, Q1 = 7.322 μs, Median = 7.337 μs, Q3 = 7.338 μs, Max = 7.338 μs
+IQR = 0.015 μs, LowerFence = 7.299 μs, UpperFence = 7.361 μs
+ConfidenceInterval = [7.009 μs; 7.647 μs] (CI 99.9%), Margin = 0.319 μs (4.35% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 2 (12.5 %) benchmark(s) to run. Estimated finish 2026-11-08 8:36 (0h 0m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.ValidateFromSpan: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.ValidateFromSpan --job ShortRun --benchmarkId 6 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 210052.00 ns, 210.0520 us/op
+WorkloadJitting  1: 1 op, 5794412.00 ns, 5.7944 ms/op
+
+OverheadJitting  2: 16 op, 216845.00 ns, 13.5528 us/op
+WorkloadJitting  2: 16 op, 1772199.00 ns, 110.7624 us/op
+
+WorkloadPilot    1: 16 op, 1099283.00 ns, 68.7052 us/op
+WorkloadPilot    2: 32 op, 1618122.00 ns, 50.5663 us/op
+WorkloadPilot    3: 64 op, 3992356.00 ns, 62.3806 us/op
+WorkloadPilot    4: 128 op, 7922897.00 ns, 61.8976 us/op
+WorkloadPilot    5: 256 op, 8944965.00 ns, 34.9413 us/op
+WorkloadPilot    6: 512 op, 9188250.00 ns, 17.9458 us/op
+WorkloadPilot    7: 1024 op, 17269062.00 ns, 16.8643 us/op
+WorkloadPilot    8: 2048 op, 34756731.00 ns, 16.9711 us/op
+WorkloadPilot    9: 4096 op, 68728787.00 ns, 16.7795 us/op
+WorkloadPilot   10: 8192 op, 198348064.00 ns, 24.2124 us/op
+WorkloadPilot   11: 16384 op, 410815660.00 ns, 25.0742 us/op
+WorkloadPilot   12: 32768 op, 323645362.00 ns, 9.8769 us/op
+WorkloadPilot   13: 65536 op, 476287660.00 ns, 7.2676 us/op
+WorkloadPilot   14: 131072 op, 944771346.00 ns, 7.2080 us/op
+
+OverheadWarmup   1: 131072 op, 295181.00 ns, 2.2521 ns/op
+OverheadWarmup   2: 131072 op, 316651.00 ns, 2.4159 ns/op
+OverheadWarmup   3: 131072 op, 316491.00 ns, 2.4146 ns/op
+OverheadWarmup   4: 131072 op, 325328.00 ns, 2.4821 ns/op
+OverheadWarmup   5: 131072 op, 294791.00 ns, 2.2491 ns/op
+
+OverheadActual   1: 131072 op, 294119.00 ns, 2.2439 ns/op
+OverheadActual   2: 131072 op, 294140.00 ns, 2.2441 ns/op
+OverheadActual   3: 131072 op, 309097.00 ns, 2.3582 ns/op
+OverheadActual   4: 131072 op, 294189.00 ns, 2.2445 ns/op
+OverheadActual   5: 131072 op, 294179.00 ns, 2.2444 ns/op
+OverheadActual   6: 131072 op, 294239.00 ns, 2.2449 ns/op
+OverheadActual   7: 131072 op, 321430.00 ns, 2.4523 ns/op
+OverheadActual   8: 131072 op, 322453.00 ns, 2.4601 ns/op
+OverheadActual   9: 131072 op, 325718.00 ns, 2.4850 ns/op
+OverheadActual  10: 131072 op, 317273.00 ns, 2.4206 ns/op
+OverheadActual  11: 131072 op, 294831.00 ns, 2.2494 ns/op
+OverheadActual  12: 131072 op, 297035.00 ns, 2.2662 ns/op
+OverheadActual  13: 131072 op, 294040.00 ns, 2.2433 ns/op
+OverheadActual  14: 131072 op, 293949.00 ns, 2.2427 ns/op
+OverheadActual  15: 131072 op, 294019.00 ns, 2.2432 ns/op
+
+WorkloadWarmup   1: 131072 op, 959003187.00 ns, 7.3166 us/op
+WorkloadWarmup   2: 131072 op, 953005562.00 ns, 7.2709 us/op
+WorkloadWarmup   3: 131072 op, 951204495.00 ns, 7.2571 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 131072 op, 943183421.00 ns, 7.1959 us/op
+WorkloadActual   2: 131072 op, 942409819.00 ns, 7.1900 us/op
+WorkloadActual   3: 131072 op, 941876672.00 ns, 7.1859 us/op
+
+// AfterActualRun
+WorkloadResult   1: 131072 op, 942889182.00 ns, 7.1937 us/op
+WorkloadResult   2: 131072 op, 942115580.00 ns, 7.1878 us/op
+WorkloadResult   3: 131072 op, 941582433.00 ns, 7.1837 us/op
+// GC:  848 211 0 14236516352 131072
+// Threading:  0 0 131072
+
+// AfterAll
+// Benchmark Process 3749 has exited with code 0.
+
+Mean = 7.188 μs, StdErr = 0.003 μs (0.04%), N = 3, StdDev = 0.005 μs
+Min = 7.184 μs, Q1 = 7.186 μs, Median = 7.188 μs, Q3 = 7.191 μs, Max = 7.194 μs
+IQR = 0.005 μs, LowerFence = 7.178 μs, UpperFence = 7.198 μs
+ConfidenceInterval = [7.097 μs; 7.280 μs] (CI 99.9%), Margin = 0.091 μs (1.27% of Mean)
+Skewness = 0.12, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 1 (6.2 %) benchmark(s) to run. Estimated finish 2026-11-08 8:36 (0h 0m from now) **
+// **************************
+// Benchmark: XmlValidationBenchmarks.CacheLookupContainsSchema: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1.dll" --anonymousPipes 140 141 --benchmarkName EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks.CacheLookupContainsSchema --job ShortRun --benchmarkId 7 in /home/runner/work/dotnet-xml/dotnet-xml/benchmarks/EricksonLopez.Xml.Validation.Benchmarks/bin/Release/net10.0/EricksonLopez.Xml.Validation.Benchmarks-.NET 10.0-1/bin/Release/net10.0
+// Failed to set up high priority (Permission denied). In order to run benchmarks with high priority, make sure you have the right permissions.
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// BenchmarkDotNet v0.15.8
+// Runtime=.NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+// GC=Concurrent Workstation
+// HardwareIntrinsics=AVX2+BMI1+BMI2+F16C+FMA+LZCNT+MOVBE,AVX,SSE3+SSSE3+SSE4.1+SSE4.2+POPCNT,X86Base+SSE+SSE2,AES+PCLMUL VectorSize=256
+// Job: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+
+OverheadJitting  1: 1 op, 204763.00 ns, 204.7630 us/op
+WorkloadJitting  1: 1 op, 291154.00 ns, 291.1540 us/op
+
+OverheadJitting  2: 16 op, 350435.00 ns, 21.9022 us/op
+WorkloadJitting  2: 16 op, 329926.00 ns, 20.6204 us/op
+
+WorkloadPilot    1: 16 op, 1943.00 ns, 121.4375 ns/op
+WorkloadPilot    2: 32 op, 2254.00 ns, 70.4375 ns/op
+WorkloadPilot    3: 64 op, 2965.00 ns, 46.3281 ns/op
+WorkloadPilot    4: 128 op, 4468.00 ns, 34.9063 ns/op
+WorkloadPilot    5: 256 op, 7394.00 ns, 28.8828 ns/op
+WorkloadPilot    6: 512 op, 13315.00 ns, 26.0059 ns/op
+WorkloadPilot    7: 1024 op, 24836.00 ns, 24.2539 ns/op
+WorkloadPilot    8: 2048 op, 73828.00 ns, 36.0488 ns/op
+WorkloadPilot    9: 4096 op, 93825.00 ns, 22.9065 ns/op
+WorkloadPilot   10: 8192 op, 213008.00 ns, 26.0020 ns/op
+WorkloadPilot   11: 16384 op, 403595.00 ns, 24.6335 ns/op
+WorkloadPilot   12: 32768 op, 746546.00 ns, 22.7828 ns/op
+WorkloadPilot   13: 65536 op, 1519421.00 ns, 23.1845 ns/op
+WorkloadPilot   14: 131072 op, 3006321.00 ns, 22.9364 ns/op
+WorkloadPilot   15: 262144 op, 6221663.00 ns, 23.7338 ns/op
+WorkloadPilot   16: 524288 op, 11976171.00 ns, 22.8427 ns/op
+WorkloadPilot   17: 1048576 op, 23973873.00 ns, 22.8633 ns/op
+WorkloadPilot   18: 2097152 op, 47855755.00 ns, 22.8194 ns/op
+WorkloadPilot   19: 4194304 op, 85737973.00 ns, 20.4415 ns/op
+WorkloadPilot   20: 8388608 op, 113030181.00 ns, 13.4742 ns/op
+WorkloadPilot   21: 16777216 op, 225505585.00 ns, 13.4412 ns/op
+WorkloadPilot   22: 33554432 op, 453781929.00 ns, 13.5238 ns/op
+WorkloadPilot   23: 67108864 op, 908680696.00 ns, 13.5404 ns/op
+
+OverheadWarmup   1: 67108864 op, 173852259.00 ns, 2.5906 ns/op
+OverheadWarmup   2: 67108864 op, 192581527.00 ns, 2.8697 ns/op
+OverheadWarmup   3: 67108864 op, 123440415.00 ns, 1.8394 ns/op
+OverheadWarmup   4: 67108864 op, 128049247.00 ns, 1.9081 ns/op
+OverheadWarmup   5: 67108864 op, 124641528.00 ns, 1.8573 ns/op
+
+OverheadActual   1: 67108864 op, 124021341.00 ns, 1.8481 ns/op
+OverheadActual   2: 67108864 op, 124914160.00 ns, 1.8614 ns/op
+OverheadActual   3: 67108864 op, 124409176.00 ns, 1.8538 ns/op
+OverheadActual   4: 67108864 op, 126144961.00 ns, 1.8797 ns/op
+OverheadActual   5: 67108864 op, 123653273.00 ns, 1.8426 ns/op
+OverheadActual   6: 67108864 op, 133198820.00 ns, 1.9848 ns/op
+OverheadActual   7: 67108864 op, 124486149.00 ns, 1.8550 ns/op
+OverheadActual   8: 67108864 op, 124172674.00 ns, 1.8503 ns/op
+OverheadActual   9: 67108864 op, 124073148.00 ns, 1.8488 ns/op
+OverheadActual  10: 67108864 op, 125116608.00 ns, 1.8644 ns/op
+OverheadActual  11: 67108864 op, 125084869.00 ns, 1.8639 ns/op
+OverheadActual  12: 67108864 op, 124546682.00 ns, 1.8559 ns/op
+OverheadActual  13: 67108864 op, 124354023.00 ns, 1.8530 ns/op
+OverheadActual  14: 67108864 op, 125106801.00 ns, 1.8642 ns/op
+OverheadActual  15: 67108864 op, 125221925.00 ns, 1.8660 ns/op
+
+WorkloadWarmup   1: 67108864 op, 903469264.00 ns, 13.4627 ns/op
+WorkloadWarmup   2: 67108864 op, 903545237.00 ns, 13.4639 ns/op
+WorkloadWarmup   3: 67108864 op, 903649321.00 ns, 13.4654 ns/op
+
+// BeforeActualRun
+WorkloadActual   1: 67108864 op, 902816495.00 ns, 13.4530 ns/op
+WorkloadActual   2: 67108864 op, 903063195.00 ns, 13.4567 ns/op
+WorkloadActual   3: 67108864 op, 904182098.00 ns, 13.4734 ns/op
+
+// AfterActualRun
+WorkloadResult   1: 67108864 op, 778269813.00 ns, 11.5971 ns/op
+WorkloadResult   2: 67108864 op, 778516513.00 ns, 11.6008 ns/op
+WorkloadResult   3: 67108864 op, 779635416.00 ns, 11.6175 ns/op
+// GC:  0 0 0 0 67108864
+// Threading:  0 0 67108864
+
+// AfterAll
+// Benchmark Process 3758 has exited with code 0.
+
+Mean = 11.605 ns, StdErr = 0.006 ns (0.05%), N = 3, StdDev = 0.011 ns
+Min = 11.597 ns, Q1 = 11.599 ns, Median = 11.601 ns, Q3 = 11.609 ns, Max = 11.617 ns
+IQR = 0.010 ns, LowerFence = 11.584 ns, UpperFence = 11.624 ns
+ConfidenceInterval = [11.407 ns; 11.803 ns] (CI 99.9%), Margin = 0.198 ns (1.70% of Mean)
+Skewness = 0.34, Kurtosis = 0.67, MValue = 2
+
+// ** Remained 0 (0.0 %) benchmark(s) to run. Estimated finish 2026-11-08 8:36 (0h 0m from now) **
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  benchmarks/results/results/EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-report.csv
+  benchmarks/results/results/EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-report-github.md
+  benchmarks/results/results/EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-report.html
+  benchmarks/results/results/EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-report-full-compressed.json
+  benchmarks/results/results/EricksonLopez.Xml.Validation.Benchmarks.XmlValidationBenchmarks-report-default.md
+
+// * Detailed results *
+XmlValidationBenchmarks.ValidateFromString: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 6.404 μs, StdErr = 0.008 μs (0.12%), N = 14, StdDev = 0.029 μs
+Min = 6.361 μs, Q1 = 6.380 μs, Median = 6.406 μs, Q3 = 6.422 μs, Max = 6.462 μs
+IQR = 0.042 μs, LowerFence = 6.317 μs, UpperFence = 6.485 μs
+ConfidenceInterval = [6.372 μs; 6.437 μs] (CI 99.9%), Margin = 0.033 μs (0.51% of Mean)
+Skewness = 0.34, Kurtosis = 2.04, MValue = 2
+-------------------- Histogram --------------------
+[6.346 μs ; 6.477 μs) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.ValidateFromStream: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 7.471 μs, StdErr = 0.038 μs (0.51%), N = 19, StdDev = 0.165 μs
+Min = 7.269 μs, Q1 = 7.293 μs, Median = 7.561 μs, Q3 = 7.588 μs, Max = 7.688 μs
+IQR = 0.294 μs, LowerFence = 6.852 μs, UpperFence = 8.029 μs
+ConfidenceInterval = [7.322 μs; 7.620 μs] (CI 99.9%), Margin = 0.149 μs (1.99% of Mean)
+Skewness = -0.17, Kurtosis = 1.14, MValue = 3.45
+-------------------- Histogram --------------------
+[7.213 μs ; 7.376 μs) | @@@@@@@@
+[7.376 μs ; 7.540 μs) | 
+[7.540 μs ; 7.703 μs) | @@@@@@@@@@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.ValidateFromSpan: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 7.562 μs, StdErr = 0.007 μs (0.10%), N = 14, StdDev = 0.027 μs
+Min = 7.518 μs, Q1 = 7.545 μs, Median = 7.566 μs, Q3 = 7.577 μs, Max = 7.612 μs
+IQR = 0.032 μs, LowerFence = 7.497 μs, UpperFence = 7.626 μs
+ConfidenceInterval = [7.531 μs; 7.592 μs] (CI 99.9%), Margin = 0.030 μs (0.40% of Mean)
+Skewness = -0.15, Kurtosis = 2.11, MValue = 2
+-------------------- Histogram --------------------
+[7.503 μs ; 7.627 μs) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 10.0(Runtime=.NET 10.0, Toolchain=net10.0)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 11.610 ns, StdErr = 0.003 ns (0.03%), N = 13, StdDev = 0.011 ns
+Min = 11.596 ns, Q1 = 11.605 ns, Median = 11.608 ns, Q3 = 11.617 ns, Max = 11.636 ns
+IQR = 0.012 ns, LowerFence = 11.588 ns, UpperFence = 11.634 ns
+ConfidenceInterval = [11.596 ns; 11.623 ns] (CI 99.9%), Margin = 0.013 ns (0.12% of Mean)
+Skewness = 0.77, Kurtosis = 2.97, MValue = 2
+-------------------- Histogram --------------------
+[11.589 ns ; 11.643 ns) | @@@@@@@@@@@@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.ValidateFromString: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.ValidateFromStream: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.ValidateFromSpan: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.ValidateFromString: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.ValidateFromStream: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.ValidateFromSpan: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+Runtime = ; GC = 
+There are not any results runs
+
+XmlValidationBenchmarks.ValidateFromString: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 6.396 μs, StdErr = 0.002 μs (0.03%), N = 3, StdDev = 0.003 μs
+Min = 6.394 μs, Q1 = 6.394 μs, Median = 6.395 μs, Q3 = 6.397 μs, Max = 6.400 μs
+IQR = 0.003 μs, LowerFence = 6.390 μs, UpperFence = 6.402 μs
+ConfidenceInterval = [6.337 μs; 6.455 μs] (CI 99.9%), Margin = 0.059 μs (0.92% of Mean)
+Skewness = 0.34, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[6.391 μs ; 6.403 μs) | @@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.ValidateFromStream: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 7.328 μs, StdErr = 0.010 μs (0.14%), N = 3, StdDev = 0.017 μs
+Min = 7.307 μs, Q1 = 7.322 μs, Median = 7.337 μs, Q3 = 7.338 μs, Max = 7.338 μs
+IQR = 0.015 μs, LowerFence = 7.299 μs, UpperFence = 7.361 μs
+ConfidenceInterval = [7.009 μs; 7.647 μs] (CI 99.9%), Margin = 0.319 μs (4.35% of Mean)
+Skewness = -0.38, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[7.307 μs ; 7.339 μs) | @@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.ValidateFromSpan: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 7.188 μs, StdErr = 0.003 μs (0.04%), N = 3, StdDev = 0.005 μs
+Min = 7.184 μs, Q1 = 7.186 μs, Median = 7.188 μs, Q3 = 7.191 μs, Max = 7.194 μs
+IQR = 0.005 μs, LowerFence = 7.178 μs, UpperFence = 7.198 μs
+ConfidenceInterval = [7.097 μs; 7.280 μs] (CI 99.9%), Margin = 0.091 μs (1.27% of Mean)
+Skewness = 0.12, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[7.179 μs ; 7.198 μs) | @@@
+---------------------------------------------------
+
+XmlValidationBenchmarks.CacheLookupContainsSchema: ShortRun(IterationCount=3, LaunchCount=1, WarmupCount=3)
+Runtime = .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3; GC = Concurrent Workstation
+Mean = 11.605 ns, StdErr = 0.006 ns (0.05%), N = 3, StdDev = 0.011 ns
+Min = 11.597 ns, Q1 = 11.599 ns, Median = 11.601 ns, Q3 = 11.609 ns, Max = 11.617 ns
+IQR = 0.010 ns, LowerFence = 11.584 ns, UpperFence = 11.624 ns
+ConfidenceInterval = [11.407 ns; 11.803 ns] (CI 99.9%), Margin = 0.198 ns (1.70% of Mean)
+Skewness = 0.34, Kurtosis = 0.67, MValue = 2
+-------------------- Histogram --------------------
+[11.587 ns ; 11.627 ns) | @@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet v0.15.8, Linux Ubuntu 26.04.1 LTS (Resolute Raccoon)
+AMD EPYC 7763 2.59GHz, 1 CPU, 4 logical and 2 physical cores
+.NET SDK 10.0.403
+  [Host]    : .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+  .NET 10.0 : .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+  ShortRun  : .NET 10.0.14 (10.0.14, 10.0.1426.52326), X64 RyuJIT x86-64-v3
+
+
+| Method                    | Job       | Runtime   | IterationCount | LaunchCount | WarmupCount | Mean        | Error      | StdDev     | Ratio | RatioSD | Gen0   | Gen1   | Allocated | Alloc Ratio |
+|-------------------------- |---------- |---------- |--------------- |------------ |------------ |------------:|-----------:|-----------:|------:|--------:|-------:|-------:|----------:|------------:|
+| ValidateFromString        | .NET 10.0 | .NET 10.0 | Default        | Default     | Default     | 6,404.40 ns |  32.567 ns |  28.870 ns |     ? |       ? | 4.5013 | 0.8926 |   75680 B |           ? |
+| ValidateFromStream        | .NET 10.0 | .NET 10.0 | Default        | Default     | Default     | 7,470.95 ns | 148.705 ns | 165.285 ns |     ? |       ? | 6.4697 | 1.6098 |  108528 B |           ? |
+| ValidateFromSpan          | .NET 10.0 | .NET 10.0 | Default        | Default     | Default     | 7,561.61 ns |  30.340 ns |  26.895 ns |     ? |       ? | 6.4697 | 1.6098 |  108616 B |           ? |
+| CacheLookupContainsSchema | .NET 10.0 | .NET 10.0 | Default        | Default     | Default     |    11.61 ns |   0.013 ns |   0.011 ns |     ? |       ? |      - |      - |         - |           ? |
+| ValidateFromString        | .NET 8.0  | .NET 8.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| ValidateFromStream        | .NET 8.0  | .NET 8.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| ValidateFromSpan          | .NET 8.0  | .NET 8.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| CacheLookupContainsSchema | .NET 8.0  | .NET 8.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| ValidateFromString        | .NET 9.0  | .NET 9.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| ValidateFromStream        | .NET 9.0  | .NET 9.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| ValidateFromSpan          | .NET 9.0  | .NET 9.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| CacheLookupContainsSchema | .NET 9.0  | .NET 9.0  | Default        | Default     | Default     |          NA |         NA |         NA |     ? |       ? |     NA |     NA |        NA |           ? |
+| ValidateFromString        | ShortRun  | .NET 10.0 | 3              | 1           | 3           | 6,396.09 ns |  58.813 ns |   3.224 ns |     ? |       ? | 4.5013 | 0.8926 |   75680 B |           ? |
+| ValidateFromStream        | ShortRun  | .NET 10.0 | 3              | 1           | 3           | 7,327.67 ns | 318.894 ns |  17.480 ns |     ? |       ? | 6.4697 | 1.6098 |  108528 B |           ? |
+| ValidateFromSpan          | ShortRun  | .NET 10.0 | 3              | 1           | 3           | 7,188.38 ns |  91.454 ns |   5.013 ns |     ? |       ? | 6.4697 | 1.6098 |  108616 B |           ? |
+| CacheLookupContainsSchema | ShortRun  | .NET 10.0 | 3              | 1           | 3           |    11.61 ns |   0.198 ns |   0.011 ns |     ? |       ? |      - |      - |         - |           ? |
+
+Benchmarks with issues:
+  XmlValidationBenchmarks.ValidateFromString: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+  XmlValidationBenchmarks.ValidateFromStream: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+  XmlValidationBenchmarks.ValidateFromSpan: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+  XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 8.0(Runtime=.NET 8.0, Toolchain=net8.0)
+  XmlValidationBenchmarks.ValidateFromString: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+  XmlValidationBenchmarks.ValidateFromStream: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+  XmlValidationBenchmarks.ValidateFromSpan: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+  XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 9.0(Runtime=.NET 9.0, Toolchain=net9.0)
+
+// * Warnings *
+BaselineCustomAnalyzer
+  Summary -> A question mark '?' symbol indicates that it was not possible to compute the (Ratio, RatioSD, Alloc Ratio) column(s) because the baseline or benchmark could not be found, or the baseline value is too close to zero.
+MultimodalDistribution
+  XmlValidationBenchmarks.ValidateFromStream: .NET 10.0 -> It seems that the distribution is bimodal (mValue = 3.45)
+
+// * Hints *
+Outliers
+  XmlValidationBenchmarks.ValidateFromString: .NET 10.0        -> 1 outlier  was  removed (6.50 μs)
+  XmlValidationBenchmarks.ValidateFromSpan: .NET 10.0          -> 1 outlier  was  removed (7.64 μs)
+  XmlValidationBenchmarks.CacheLookupContainsSchema: .NET 10.0 -> 2 outliers were removed (13.54 ns, 13.86 ns)
+
+// * Legends *
+  Mean        : Arithmetic mean of all measurements
+  Error       : Half of 99.9% confidence interval
+  StdDev      : Standard deviation of all measurements
+  Ratio       : Mean of the ratio distribution ([Current]/[Baseline])
+  RatioSD     : Standard deviation of the ratio distribution ([Current]/[Baseline])
+  Gen0        : GC Generation 0 collects per 1000 operations
+  Gen1        : GC Generation 1 collects per 1000 operations
+  Allocated   : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  Alloc Ratio : Allocated memory ratio distribution ([Current]/[Baseline])
+  1 ns        : 1 Nanosecond (0.000000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+Run time: 00:02:20 (140.2 sec), executed benchmarks: 8
+
+Global total time: 00:02:36 (156.2 sec), executed benchmarks: 8
+// * Artifacts cleanup *
+Artifacts cleanup is finished
